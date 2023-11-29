@@ -1,5 +1,16 @@
 <script>
-    export let data
+    export let data;
+
+    const { allPosts } = data;
 </script>
 
-<pre>{ JSON.stringify(data, 0, 2) }</pre>
+<main>
+    <h1>I Love Web</h1>
+
+    {#each allPosts as post}
+        <article>
+            <h2>{post.title}</h2>
+            <p>{post.content}</p>
+        </article>
+    {/each}
+</main>
