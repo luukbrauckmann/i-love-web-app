@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  app: {
+    head: {
+      title: 'I Love Web',
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
   runtimeConfig: {
     public: {
       datocmsApiToken: process.env.DATOCMS_API_TOKEN,
