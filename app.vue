@@ -1,3 +1,7 @@
 <template>
-    <NuxtPage/>
+  <header>
+    <Nav />
+  </header>
+
+  <NuxtPage />
 </template>
