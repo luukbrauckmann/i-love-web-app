@@ -22,9 +22,7 @@ const { data, error } = await useGraphqlQuery({ query: QUERY });
     <Meta name="description" :content="data.post.title" />
   </Head>
 
-  <main>
-    <NuxtLink to="/">Back</NuxtLink>
-    <h1>{{ data.post.title }}</h1>
-    <p>{{ data.post.content }}</p>
-  </main>
+  <NuxtLink to="/">Back</NuxtLink>
+  <h1>{{ data.post.title }}</h1>
+  <p>{{ data.post.content }}</p>
 </template>

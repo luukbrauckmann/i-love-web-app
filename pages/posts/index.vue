@@ -24,13 +24,11 @@ const { data } = await useGraphqlQuery({ query: QUERY });
     <Title>Posts</Title>
   </Head>
 
-  <main>
     <h1>Posts</h1>
 
-    <article v-for="post in data.allPosts" :key="post.id">
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.content }}</p>
-      <NuxtLink :to="`/posts/${post.slug}`">Read more</NuxtLink>
-    </article>
-  </main>
+  <article v-for="post in data.allPosts" :key="post.id">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <NuxtLink :to="`/posts/${post.slug}`">Read more</NuxtLink>
+  </article>
 </template>
